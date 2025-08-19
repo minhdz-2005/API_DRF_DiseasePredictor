@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'api',
     'django_filters',
     'corsheaders',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://your-production-domain.com",
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
 
 ROOT_URLCONF = 'config.urls'
 

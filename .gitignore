@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.env/
+
+# Django/DRF
+*.sqlite3
+db.sqlite3
+*.log
+*.pot
+*.pyc
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDEs
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Test and coverage
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Node (if using frontend)
+node_modules/
+
+# OneDrive temp files
+~$*
+
+# Others
+*.bak
+*.swp
+*.tmp

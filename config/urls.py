@@ -19,13 +19,19 @@ from django.urls import path, include
 from django.http import HttpResponse
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
+from api.views import (
+    SymptomListView,
+    DiseaseListView,
+    StatisticListView,
+    TreatmentListView,
+    PredictDiseaseView
+    )
+
 def home(request):
     html_content = """
     <h1>Welcome to Disease Predictor API!</h1>
     <ul>
         <li><a href="/api/">API Root</a></li>
-        <li><a href="/api/statistics/">Statistics API</a></li>
-        <li><a href="/api/treatments/">Treatments API</a></li>
         <li><a href="/api/docs/">API Documentation (Swagger)</a></li>
         <li><a href="/api/docs/redoc/">API Documentation (ReDoc)</a></li>
     </ul>
@@ -34,8 +40,14 @@ def home(request):
 
 urlpatterns = [
     path('', home),
-    path("api/", include("api.urls")),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='docs'),
     path('api/docs/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+
+    path("symptoms/", SymptomListView.as_view(), name="symptom-list"),
+    path("diseases/", DiseaseListView.as_view(), name="disease-list"),
+    path("statistics/", StatisticListView.as_view(), name="statistics-list"),
+    path("treatments/", TreatmentListView.as_view(), name="treatments-list"),
+    path("predict/", PredictDiseaseView.as_view(), name="predict-disease"),
+
 ]

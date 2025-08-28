@@ -9,7 +9,7 @@ from django.db import models
 
 
 class Statistics(models.Model):
-    field_id = models.CharField(db_column='_id', primary_key=True, max_length=24)  # Field renamed because it started with '_'.
+    field_id = models.CharField(db_column='mongo_id', primary_key=True, max_length=24)  # Field renamed because it started with '_'.
     disease = models.CharField(max_length=100)
     count = models.IntegerField(blank=True, null=True)
 
@@ -19,9 +19,9 @@ class Statistics(models.Model):
 
 
 class Treatments(models.Model):
-    field_id = models.CharField(db_column='_id', primary_key=True, max_length=24)  # Field renamed because it started with '_'.
+    field_id = models.CharField(db_column='mongo_id', primary_key=True, max_length=24)  # Field renamed because it started with '_'.
     disease = models.CharField(max_length=100)
-    information = models.TextField(blank=True, null=True)
+    infomation = models.TextField(blank=True, null=True)
     treatment = models.TextField(blank=True, null=True)
 
     class Meta:

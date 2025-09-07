@@ -3,6 +3,8 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
+from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample
+from drf_spectacular.types import OpenApiTypes
 
 import csv
 import os
@@ -61,6 +63,69 @@ class TreatmentListView(APIView):
 
 
 # ==== Predict Disease API ====
+@extend_schema(
+    description="API dự đoán bệnh dựa trên danh sách triệu chứng",
+    request={
+        'application/json': {
+            'type': 'object',
+            'properties': {
+                'symptoms': {
+                    'type': 'array',
+                    'items': {'type': 'string'},
+                    'description': 'Danh sách các triệu chứng'
+                }
+            }
+        }
+    },
+    responses={
+        200: {
+            'description': 'Successful prediction',
+            'type': 'object',
+            'properties': {
+                'predictions': {
+                    'type': 'array',
+                    'items': {
+                        'type': 'object',
+                        'properties': {
+                            'disease': {'type': 'string'},
+                            'probability': {'type': 'string'}
+                        }
+                    }
+                }
+            }
+        },
+        400: {
+            'description': 'Bad request - No valid symptoms provided'
+        }
+    },
+    examples=[
+        OpenApiExample(
+            'Example Request',
+            value={'symptoms': ["itching",  "skin_rash",  "nodal_skin_eruptions"]},
+            request_only=True
+        ),
+        OpenApiExample(
+            'Example Response',
+            value={
+                'predictions': [
+                    {
+                        "disease": "Fungal infection",
+                        "probability": "100.0%"
+                    },
+                    {
+                        "disease": "Varicose veins",
+                        "probability": "0.0%"
+                    },
+                    {
+                        "disease": "Urinary tract infection",
+                        "probability": "0.0%"
+                    }
+                ]
+            },
+            response_only=True
+        )
+    ]
+)
 class PredictDiseaseView(APIView):
     def post(self, request):
         # Input: danh sách triệu chứng

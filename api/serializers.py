@@ -9,7 +9,7 @@ class StatisticsSerializer(serializers.ModelSerializer):
 class TreatmentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Treatments
-        fields = '__all__'
+        exclude = ('field_id',)
 
 class PredictRequestSerializer(serializers.Serializer):
     symptoms = serializers.ListField(

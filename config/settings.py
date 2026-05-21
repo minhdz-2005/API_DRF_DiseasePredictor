@@ -75,8 +75,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "https://your-production-domain.com",
+    "https://disease-predictor-wheat.vercel.app",
 ]
 
 REST_FRAMEWORK = {

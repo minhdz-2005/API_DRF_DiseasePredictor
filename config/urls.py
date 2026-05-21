@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
+from rest_framework.routers import DefaultRouter
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
 from api.views import (
@@ -24,14 +25,26 @@ from api.views import (
     DiseaseListView,
     StatisticListView,
     TreatmentListView,
-    PredictDiseaseView
+    PredictDiseaseView,
+
+    LoginView,
+    RegisterView,
+    BlogViewSet,
+    CommentViewSet,
+    PredictionHistoryViewSet,
+    UserViewSet
     )
+router = DefaultRouter()
+router.register(r'blogs', BlogViewSet, basename='blog')
+router.register(r'comments', CommentViewSet, basename='comment')
+router.register(r'history', PredictionHistoryViewSet, basename='history')
+router.register(r'users', UserViewSet, basename='user');
 
 def home(request):
     html_content = """
     <h1>Welcome to Disease Predictor API!</h1>
     <ul>
-        <li><a href="/api/">API Root</a></li>
+        <li><a href="/">API Root</a></li>
         <li><a href="/api/docs/">API Documentation (Swagger)</a></li>
         <li><a href="/api/docs/redoc/">API Documentation (ReDoc)</a></li>
     </ul>
@@ -50,4 +63,9 @@ urlpatterns = [
     path("treatments/", TreatmentListView.as_view(), name="treatments-list"),
     path("predict/", PredictDiseaseView.as_view(), name="predict-disease"),
 
+
+    path('register/', RegisterView.as_view(), name='register'),
+    path('login/', LoginView.as_view(), name='login'),
+
+    path('', include(router.urls))
 ]

@@ -5,19 +5,26 @@ from rest_framework.views import APIView
 from rest_framework import status
 from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample
 from drf_spectacular.types import OpenApiTypes
+from django.contrib.auth.hashers import make_password, check_password
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import api_view, permission_classes
 
 import csv
 import os
 import joblib
 
-from .models import Statistics, Treatments
-from .serializers import StatisticsSerializer, TreatmentsSerializer
+from .models import Statistics, Treatments, User, Blog, Comment, PredictionHistory
+from .serializers import StatisticsSerializer, TreatmentsSerializer, BlogSerializer, CommentSerializer, UserSerializer, PredictionHistorySerializer
 from .predict_utils import predict_top_k   # import hàm dự đoán
 
 
 # Update statistics function for new disease
 def update_statistics(disease_name: str):
     stat, created = Statistics.objects.get_or_create(disease=disease_name)
+    if stat.count is None:
+        stat.count = 0
     stat.count += 1
     stat.save()
 
@@ -160,3 +167,129 @@ class PredictDiseaseView(APIView):
                 for disease, prob in results
             ]
         })
+
+
+
+
+
+
+
+
+
+# ==== User Registration API ====
+class RegisterView(APIView):
+    """
+    API đăng ký tài khoản người dùng mới
+    """
+    def post(self, request):
+        username = request.data.get("username")
+        email = request.data.get("email")
+        password = request.data.get("password")
+        role = request.data.get("role", "user")  # mặc định là user
+
+        # Kiểm tra đầu vào
+        if not username or not email or not password:
+            return Response({"detail": "Thiếu thông tin đăng ký."}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Kiểm tra trùng tên hoặc email
+        if User.objects.filter(username=username).exists():
+            return Response({"detail": "Tên người dùng đã tồn tại."}, status=status.HTTP_400_BAD_REQUEST)
+        if User.objects.filter(email=email).exists():
+            return Response({"detail": "Email đã được sử dụng."}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Mã hóa mật khẩu
+        hashed_password = make_password(password)
+
+        # Tạo user
+        user = User.objects.create(
+            username=username,
+            email=email,
+            password=hashed_password,
+            role=role
+        )
+
+        return Response({
+            "message": "Đăng ký thành công!",
+            "user": {
+                "id": user.user_id,
+                "username": user.username,
+                "email": user.email,
+                "role": user.role
+            }
+        }, status=status.HTTP_201_CREATED)
+
+
+# ==== User Login API ====
+class LoginView(APIView):
+    """
+    API đăng nhập (xác thực username + password)
+    """
+    def post(self, request):
+        username = request.data.get("username")
+        password = request.data.get("password")
+
+        if not username or not password:
+            return Response({"detail": "Thiếu tên đăng nhập hoặc mật khẩu."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            user = User.objects.get(username=username)
+        except User.DoesNotExist:
+            return Response({"detail": "Tên đăng nhập không tồn tại."}, status=status.HTTP_404_NOT_FOUND)
+
+        # Kiểm tra mật khẩu
+        if not check_password(password, user.password):
+            return Response({"detail": "Sai mật khẩu."}, status=status.HTTP_401_UNAUTHORIZED)
+
+        # Nếu đúng → trả thông tin user
+        return Response({
+            "message": "Đăng nhập thành công!",
+            "user": {
+                "id": user.user_id,
+                "username": user.username,
+                "email": user.email,
+                "role": user.role
+            }
+        }, status=status.HTTP_200_OK)
+    
+
+class BlogViewSet(viewsets.ModelViewSet):
+    """
+    CRUD API cho Blog
+    - User: tạo, xem, sửa, xóa bài viết của mình.
+    - Admin: duyệt và quản lý tất cả bài viết.
+    """
+    queryset = Blog.objects.all().order_by('-created_at')
+    serializer_class = BlogSerializer
+
+class CommentViewSet(viewsets.ModelViewSet):
+    queryset = Comment.objects.all().order_by('-created_at')
+    serializer_class = CommentSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        blog_id = self.request.query_params.get('blog')
+        author_id = self.request.query_params.get('author')
+
+        # Nếu có query ?blog= thì lọc comment theo blog đó
+        if blog_id:
+            queryset = queryset.filter(blog_id=blog_id)
+
+        if author_id:
+            queryset = queryset.filter(author_id=author_id)
+
+        return queryset
+
+
+class PredictionHistoryViewSet(viewsets.ModelViewSet):
+    serializer_class = PredictionHistorySerializer
+
+    def get_queryset(self):
+        queryset = PredictionHistory.objects.all()
+        user_id = self.request.query_params.get("user", None)
+        if user_id is not None:
+            queryset = queryset.filter(user_id=user_id)
+        return queryset
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all().order_by('created_at')
+    serializer_class = UserSerializer

@@ -13,7 +13,7 @@ class Statistics(models.Model):
     count = models.IntegerField(default=0)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'statistics'
 
 
@@ -24,7 +24,7 @@ class Treatments(models.Model):
     treatment = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'treatments'
 
 # =========================

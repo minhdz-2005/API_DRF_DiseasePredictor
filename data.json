@@ -1,0 +1,590 @@
+[
+{
+  "model": "api.statistics",
+  "pk": 1,
+  "fields": {
+    "disease": "Hyperthyroidism",
+    "count": 1
+  }
+},
+{
+  "model": "api.statistics",
+  "pk": 2,
+  "fields": {
+    "disease": "Allergy",
+    "count": 1
+  }
+},
+{
+  "model": "api.statistics",
+  "pk": 3,
+  "fields": {
+    "disease": "Typhoid",
+    "count": 2
+  }
+},
+{
+  "model": "api.statistics",
+  "pk": 4,
+  "fields": {
+    "disease": "Varicose veins",
+    "count": 1
+  }
+},
+{
+  "model": "api.statistics",
+  "pk": 5,
+  "fields": {
+    "disease": "Arthritis",
+    "count": 1
+  }
+},
+{
+  "model": "api.statistics",
+  "pk": 6,
+  "fields": {
+    "disease": "Impetigo",
+    "count": 1
+  }
+},
+{
+  "model": "api.statistics",
+  "pk": 7,
+  "fields": {
+    "disease": "Urinary tract infection",
+    "count": 1
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d60",
+  "fields": {
+    "disease": "Fungal infection",
+    "infomation": "Diseases caused by fungi affecting skin, nails, mucous membranes, lungs, or internal organs.",
+    "treatment": "Antifungal medications in topical (creams, ointments), oral (pills, liquids), or intravenous forms, depending on infection severity and location. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d61",
+  "fields": {
+    "disease": "Allergy",
+    "infomation": "An overreaction of the immune system to harmless substances like pollen, dust, or certain foods.",
+    "treatment": "Includes antihistamines, corticosteroids, decongestants, nasal sprays, and immunotherapy (allergy shots or sublingual tablets) to build tolerance."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d62",
+  "fields": {
+    "disease": "GERD",
+    "infomation": "(Gastroesophageal Reflux Disease), A chronic condition where stomach acid flows back into the esophagus, causing heartburn and irritation.",
+    "treatment": "Lifestyle changes (diet modification, weight loss), over-the-counter antacids, H2 blockers, proton pump inhibitors, and in severe cases, surgery."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d63",
+  "fields": {
+    "disease": "Chronic cholestasis",
+    "infomation": "Long-term reduction or stoppage of bile flow, leading to accumulation of bile acids in the liver.",
+    "treatment": "Medications like ursodeoxycholic acid to improve bile flow, phenobarbital in some pediatric cases, and management of complications such as osteoporosis with bisphosphonates. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d64",
+  "fields": {
+    "disease": "Drug Reaction",
+    "infomation": "Adverse immune response to a medication, ranging from mild rashes to severe systemic reactions.",
+    "treatment": "Immediate discontinuation of the offending drug, administration of antihistamines or corticosteroids for symptom relief, and in some cases, desensitization therapy. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d65",
+  "fields": {
+    "disease": "Peptic ulcer diseae",
+    "infomation": "Open sores that develop on the inner lining of the stomach or upper small intestine, often due to H. pylori infection or NSAID use.",
+    "treatment": "Combination of antibiotics to eradicate H. pylori, proton pump inhibitors to reduce stomach acid, and lifestyle modifications."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d66",
+  "fields": {
+    "disease": "AIDS",
+    "infomation": "(Acquired Immunodeficiency Syndrome), Advanced stage of HIV infection characterized by a severely weakened immune system.",
+    "treatment": "Antiretroviral therapy (ART) involving a combination of HIV medicines to control the virus, improve immune function, and reduce transmission risk."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d67",
+  "fields": {
+    "disease": "Diabetes",
+    "infomation": "A metabolic disorder characterized by high blood sugar levels due to insulin deficiency or resistance.",
+    "treatment": "Includes lifestyle changes (diet, exercise), blood sugar monitoring, oral medications, insulin therapy, and in some cases, pancreas transplantation."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d68",
+  "fields": {
+    "disease": "Gastroenteritis",
+    "infomation": "Inflammation of the stomach and intestines, leading to symptoms like diarrhea, vomiting, and abdominal cramps.",
+    "treatment": "Supportive care with fluid and electrolyte replacement, rest, and, in some cases, medications to alleviate symptoms. Antibiotics are rarely needed. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d69",
+  "fields": {
+    "disease": "Bronchial Asthma",
+    "infomation": "A chronic inflammatory disease of the airways causing episodes of wheezing, breathlessness, chest tightness, and coughing.",
+    "treatment": "Inhaled corticosteroids to reduce inflammation, bronchodilators for symptom relief, avoidance of triggers, and in severe cases, biologic therapies. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d6a",
+  "fields": {
+    "disease": "Hypertension ",
+    "infomation": "(High Blood Pressure), A condition where the force of the blood against artery walls is consistently too high (ΓëÑ140/90 mmHg), increasing the risk of heart disease and stroke.",
+    "treatment": "Lifestyle changes such as reducing sodium intake, regular exercise, and limiting alcohol. Medications may include diuretics, ACE inhibitors, or beta-blockers."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d6b",
+  "fields": {
+    "disease": "Migraine",
+    "infomation": "A neurological condition characterized by intense, throbbing headaches, often accompanied by nausea, vomiting, and sensitivity to light and sound.",
+    "treatment": "Over-the-counter pain relievers, prescription medications like triptans, and preventive measures including lifestyle modifications and avoiding known triggers."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d6c",
+  "fields": {
+    "disease": "Cervical spondylosis",
+    "infomation": "Age-related wear and tear affecting the spinal disks in the neck, leading to stiffness and pain.",
+    "treatment": "Physical therapy, pain relievers, and in severe cases, surgical intervention to relieve nerve compression."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d6d",
+  "fields": {
+    "disease": "Paralysis (brain hemorrhage)",
+    "infomation": "Loss of muscle function due to bleeding in the brain, often resulting from a ruptured blood vessel.",
+    "treatment": "Emergency medical care to control bleeding and reduce pressure in the brain, followed by rehabilitation therapies."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d6e",
+  "fields": {
+    "disease": "Jaundice",
+    "infomation": "Yellowing of the skin and eyes caused by elevated bilirubin levels, often indicating liver dysfunction.",
+    "treatment": "Addressing the underlying cause, such as treating hepatitis or managing bile duct obstructions. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d6f",
+  "fields": {
+    "disease": "Malaria",
+    "infomation": "A mosquito-borne disease caused by Plasmodium parasites, leading to fever, chills, and flu-like symptoms.",
+    "treatment": "Antimalarial medications like chloroquine or artemisinin-based combination therapies, depending on the parasite strain. \\nMayo Clinic"
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d70",
+  "fields": {
+    "disease": "Chicken pox",
+    "infomation": "A highly contagious viral infection causing an itchy rash with red spots and blisters.",
+    "treatment": "Symptom relief through antihistamines and calamine lotion; vaccination is the best preventive measure. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d71",
+  "fields": {
+    "disease": "Dengue",
+    "infomation": "A mosquito-transmitted viral infection causing high fever, rash, and muscle pain. Severe cases can lead to dengue hemorrhagic fever.",
+    "treatment": "No specific treatment; supportive care includes hydration and pain relievers.\\n\\n"
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d72",
+  "fields": {
+    "disease": "Typhoid",
+    "infomation": " A bacterial infection caused by Salmonella typhi, spread through contaminated food and water.",
+    "treatment": "Antibiotic therapy is essential; vaccination and improved sanitation are key preventive measures. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d73",
+  "fields": {
+    "disease": "Hepatitis A",
+    "infomation": "A contagious liver infection caused by the hepatitis A virus, often transmitted through ingestion of contaminated food or water.",
+    "treatment": "Most cases resolve without treatment; vaccination is effective for prevention. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d74",
+  "fields": {
+    "disease": "Hepatitis B",
+    "infomation": "A viral infection that attacks the liver and can cause both acute and chronic disease.",
+    "treatment": "Acute: No specific treatment; supportive care includes rest, adequate nutrition, and fluids.\\n\\nChronic: Treated with antiviral medications such as tenofovir or entecavir to suppress the virus and prevent liver damage."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d75",
+  "fields": {
+    "disease": "Hepatitis C",
+    "infomation": "A liver infection caused by the hepatitis C virus, often leading to chronic liver disease.",
+    "treatment": "Direct-acting antiviral (DAA) medications can cure most cases, typically within 8 to 12 weeks. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d76",
+  "fields": {
+    "disease": "Hepatitis D",
+    "infomation": "A liver infection caused by the hepatitis D virus, which only occurs in those infected with hepatitis B.",
+    "treatment": "Pegylated interferon is the primary treatment, effective in about 30% of cases. New treatments like Bulevirtide have been approved in some regions."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d77",
+  "fields": {
+    "disease": "Hepatitis E",
+    "infomation": "A liver disease caused by the hepatitis E virus, typically transmitted through contaminated water.",
+    "treatment": "Usually self-limiting; supportive care includes rest and hydration. In chronic cases, antiviral medications like ribavirin may be used."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d78",
+  "fields": {
+    "disease": "Alcoholic hepatitis",
+    "infomation": "Inflammation of the liver caused by excessive alcohol consumption.",
+    "treatment": "Immediate cessation of alcohol intake is crucial. Corticosteroids may be prescribed in severe cases. Nutritional support and counseling are also important."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d79",
+  "fields": {
+    "disease": "Tuberculosis",
+    "infomation": "A contagious bacterial infection that primarily affects the lungs but can spread to other organs.",
+    "treatment": "A combination of antibiotics taken over several months. Drug-resistant TB may require newer regimens like BPaLM, which shortens treatment duration."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d7a",
+  "fields": {
+    "disease": "Common Cold",
+    "infomation": "A viral infection of the upper respiratory tract, causing symptoms like a runny nose, sore throat, and cough.",
+    "treatment": "No cure; treatment focuses on relieving symptoms through rest, hydration, and over-the-counter remedies."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d7b",
+  "fields": {
+    "disease": "Pneumonia",
+    "infomation": "An infection that inflames the air sacs in one or both lungs, which may fill with fluid.",
+    "treatment": "Depends on the cause; bacterial pneumonia is treated with antibiotics, while viral pneumonia may require antiviral medications. Severe cases may need hospitalization and supportive care. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d7c",
+  "fields": {
+    "disease": "Dimorphic hemmorhoids(piles)",
+    "infomation": "Swollen veins in the lower rectum or anus, causing discomfort and bleeding.",
+    "treatment": "Over-the-counter creams, warm baths, and dietary changes can alleviate symptoms. Procedures like rubber band ligation or surgical removal may be necessary for severe cases."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d7d",
+  "fields": {
+    "disease": "Heart attack",
+    "infomation": "Occurs when blood flow to a part of the heart is blocked, leading to damage or death of heart muscle.",
+    "treatment": "Immediate medical attention is critical. Treatments include medications, angioplasty, stenting, or surgery to restore blood flow. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d7e",
+  "fields": {
+    "disease": "Varicose veins",
+    "infomation": "Swollen, twisted veins that are visible just under the surface of the skin, commonly occurring in the legs due to weakened vein walls and valves.",
+    "treatment": "Lifestyle changes (e.g., exercise, leg elevation), compression stockings, and medical procedures like sclerotherapy, laser treatments, or surgical removal in severe cases."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d7f",
+  "fields": {
+    "disease": "Hypothyroidism",
+    "infomation": "A condition where the thyroid gland doesn't produce enough thyroid hormones, leading to a slowdown in bodily functions.",
+    "treatment": "Daily intake of synthetic thyroid hormone levothyroxine to normalize hormone levels and alleviate symptoms."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d80",
+  "fields": {
+    "disease": "Hyperthyroidism",
+    "infomation": "A condition where the thyroid gland produces excessive thyroid hormones, accelerating the body's metabolism.",
+    "treatment": "Options include antithyroid medications, radioactive iodine therapy, beta-blockers to manage symptoms, and sometimes surgical removal of the thyroid gland."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d81",
+  "fields": {
+    "disease": "Hypoglycemia",
+    "infomation": "A condition characterized by abnormally low blood sugar levels, often associated with diabetes treatment but can occur in non-diabetics as well.",
+    "treatment": "Immediate consumption of fast-acting carbohydrates (like glucose tablets or juice), adjusting diabetes medications, and addressing underlying causes in non-diabetic individuals. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d82",
+  "fields": {
+    "disease": "Osteoarthristis",
+    "infomation": "A degenerative joint disease where the cartilage that cushions the ends of bones wears down over time, causing pain and stiffness.",
+    "treatment": "Includes physical therapy, medications (like pain relievers and anti-inflammatories), lifestyle modifications, and in severe cases, joint replacement surgery."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d83",
+  "fields": {
+    "disease": "Arthritis",
+    "infomation": "Inflammation of one or more joints, leading to pain and stiffness. There are various types, including osteoarthritis and rheumatoid arthritis.",
+    "treatment": "Depends on the type but may involve medications, physical therapy, lifestyle changes, and sometimes surgery to repair joint damage. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d84",
+  "fields": {
+    "disease": "(vertigo) Paroymsal  Positional Vertigo",
+    "infomation": "A disorder arising from a problem in the inner ear, leading to brief episodes of dizziness or vertigo triggered by changes in head position.",
+    "treatment": "Canalith repositioning maneuvers (like the Epley maneuver) performed by a healthcare professional to move the dislodged crystals in the inner ear to a position where they don't cause symptoms. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d85",
+  "fields": {
+    "disease": "Acne",
+    "infomation": "A skin condition where hair follicles become clogged with oil and dead skin cells, leading to pimples, blackheads, and whiteheads.",
+    "treatment": "Over-the-counter topical treatments, prescription medications (like retinoids and antibiotics), hormonal therapies, and in severe cases, isotretinoin."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d86",
+  "fields": {
+    "disease": "Urinary tract infection",
+    "infomation": "An infection in any part of the urinary system, commonly the bladder and urethra, caused by bacteria.",
+    "treatment": "Antibiotics to eliminate the infection, increased fluid intake, and preventive measures like proper hygiene practices. "
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d87",
+  "fields": {
+    "disease": "Psoriasis",
+    "infomation": "A chronic autoimmune skin disease that speeds up the life cycle of skin cells, leading to red patches covered with silvery scales.",
+    "treatment": "Topical treatments (like corticosteroids), phototherapy, and systemic medications (like biologics) to reduce inflammation and slow skin cell turnover."
+  }
+},
+{
+  "model": "api.treatments",
+  "pk": "6824c8c6fe8dc25df5c23d88",
+  "fields": {
+    "disease": "Impetigo",
+    "infomation": "A highly contagious bacterial skin infection, common in children, characterized by red sores that can rupture, ooze, and form a yellow-brown crust.",
+    "treatment": "Topical antibiotic ointments or creams; in more severe cases, oral antibiotics may be prescribed."
+  }
+},
+{
+  "model": "api.user",
+  "pk": 2,
+  "fields": {
+    "username": "minh2005",
+    "email": "1xcbanzzz@gmail.com",
+    "password": "pbkdf2_sha256$1000000$bgNTfoTiNmxzmXM47r6j5x$go1HvdWKhYjDusDe5noqYNgjkM4e1nxVjag83E+h7BI=",
+    "role": "user",
+    "created_at": "2025-11-14T04:04:08.652Z"
+  }
+},
+{
+  "model": "api.user",
+  "pk": 3,
+  "fields": {
+    "username": "minh2102",
+    "email": "abc@gmail.com",
+    "password": "pbkdf2_sha256$1000000$U0CvihQe5AdOiCFFq636Yo$gQiLYMZbfkaHsdzWClGlkB3gA6HvLrpcxh6HtLWpdRw=",
+    "role": "user",
+    "created_at": "2025-11-14T04:14:02.705Z"
+  }
+},
+{
+  "model": "api.user",
+  "pk": 4,
+  "fields": {
+    "username": "minhdz",
+    "email": "jqk@gmail.com",
+    "password": "pbkdf2_sha256$1000000$R2nU3rv4GLx872jeorhfXk$2xt5pSck9V5qiVOd9GZPmLxTNtIDdK4Z5SQk3w2nD4A=",
+    "role": "admin",
+    "created_at": "2025-11-14T06:36:12.478Z"
+  }
+},
+{
+  "model": "api.blog",
+  "pk": 5,
+  "fields": {
+    "author": 4,
+    "title": "Hello everyone",
+    "content": "This is the new post",
+    "status": "approved",
+    "created_at": "2025-11-15T08:17:23.639Z"
+  }
+},
+{
+  "model": "api.blog",
+  "pk": 6,
+  "fields": {
+    "author": 4,
+    "title": "awd",
+    "content": "awdad",
+    "status": "rejected",
+    "created_at": "2025-11-15T08:18:53.084Z"
+  }
+},
+{
+  "model": "api.blog",
+  "pk": 7,
+  "fields": {
+    "author": 4,
+    "title": "hg,,",
+    "content": "h,g",
+    "status": "pending",
+    "created_at": "2025-11-15T08:20:43.729Z"
+  }
+},
+{
+  "model": "api.blog",
+  "pk": 8,
+  "fields": {
+    "author": 4,
+    "title": "Chelsea 3 - 0 Barcelona !!!",
+    "content": "Cucurella hide Lamine Yamal in his pocket !!!",
+    "status": "approved",
+    "created_at": "2025-11-26T16:12:41.288Z"
+  }
+},
+{
+  "model": "api.comment",
+  "pk": 18,
+  "fields": {
+    "blog": 8,
+    "author": 4,
+    "content": "nice !",
+    "created_at": "2025-11-26T16:13:16.151Z"
+  }
+},
+{
+  "model": "api.predictionhistory",
+  "pk": 2,
+  "fields": {
+    "user": 3,
+    "symptoms": [
+      "acute_liver_failure",
+      "brittle_nails",
+      "chills"
+    ],
+    "disease_1": "Allergy",
+    "disease_2": "Hypothyroidism",
+    "disease_3": "Hepatitis E",
+    "prob_1": 43.0,
+    "prob_2": 18.0,
+    "prob_3": 8.0,
+    "created_at": "2025-11-14T04:20:59.439Z"
+  }
+},
+{
+  "model": "api.predictionhistory",
+  "pk": 3,
+  "fields": {
+    "user": 4,
+    "symptoms": [
+      "stomach_pain",
+      "abdominal_pain",
+      "belly_pain"
+    ],
+    "disease_1": "Typhoid",
+    "disease_2": "GERD",
+    "disease_3": "Drug Reaction",
+    "prob_1": 38.0,
+    "prob_2": 17.0,
+    "prob_3": 14.0,
+    "created_at": "2025-11-14T16:02:30.845Z"
+  }
+},
+{
+  "model": "api.predictionhistory",
+  "pk": 4,
+  "fields": {
+    "user": 4,
+    "symptoms": [
+      "restlessness",
+      "swollen_legs",
+      "dizziness"
+    ],
+    "disease_1": "Varicose veins",
+    "disease_2": "Cervical spondylosis",
+    "disease_3": "Hypertension",
+    "prob_1": 28.0,
+    "prob_2": 24.0,
+    "prob_3": 10.0,
+    "created_at": "2025-11-15T08:21:16.261Z"
+  }
+},
+{
+  "model": "api.predictionhistory",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "symptoms": [
+      "excessive_hunger",
+      "toxic_look_(typhos)",
+      "stiff_neck"
+    ],
+    "disease_1": "Arthritis",
+    "disease_2": "Migraine",
+    "disease_3": "Typhoid",
+    "prob_1": 25.0,
+    "prob_2": 21.0,
+    "prob_3": 20.0,
+    "created_at": "2025-11-26T16:02:30.990Z"
+  }
+}
+]
